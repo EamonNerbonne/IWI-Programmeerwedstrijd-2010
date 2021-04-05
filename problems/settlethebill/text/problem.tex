@@ -1,0 +1,42 @@
+\input{../../../tools/stand-alone}
+\Problem{Settle the Bill}
+
+%% author:			Jasper
+%% reviews:         -
+%% text-completion:	0%
+%% contest:			iwi2010
+%% keywords:		example
+%% difficulty:		1..5
+
+\def\BillHero{Professor Bakker}
+
+{\StandaardZin}
+Unfortunately the new OV-chipcard does not allow for multiple people to travel on one card.
+This is bad news for the Computer Science department as they frequently travel together, sharing the costs.
+They have not settled the last few travel bills yet, expecting that in the long run everything would cancel out.
+However, because of the economic crisis they agree to settle the bills now, once and for all.
+
+%As they have not settled the last few travel bills yet (hoping that in the long run it would cancel out) they agree to settle them now, once and for all.
+
+As a certain kind of laziness comes natural to every good computer scientist: they naturally want to minimize the number of transactions.
+After a few all-nighters {\BillHero} has figured out that $n-1$ is an upper bound for the number of transactions needed to settle debts between $n$ persons.
+His general theory of settlements is based on the assumption that the number of transactions over $x$ days is described by %$t(x) = \frac{x^{(n-1)}-1}{x-1}$.
+$t(x) = \bigl(x^{(n-1)}-1\bigr)/\bigl(x-1\bigr)$.
+In the optimal case where all transactions are settled in a single day this gives $\lim_{x\rightarrow 1}\bigl(x^{(n-1)}-1\bigr)/\bigl(x-1\bigr)=n-1$.
+
+%\NOTTODO{More math mumbo-jumbo? E.g. $\lim_{x\rightarrow 1}\frac{x^{(n-1)}-1}{x-1}=n-1$.}
+Some people think they can do better though.
+Can they?
+
+\Input
+\begin{itemize}
+ \item A line containing two positive integers $n < 20$ and $m < 400$, the number of people and the number of debts respectively.
+ \item $m$ lines containing three integers $0 \leq f_i, t_i < n$ and $a_i < 10^7$, the zero-based index of the person who owes money, the zero-based index of the person to whom he owes money, and the amount of money owed in Euros.
+\end{itemize}
+
+\Output
+\begin{itemize}
+ \item One line containing \literaloutput{tight} if {\BillHero}'s bound is tight (exactly $n-1$ transactions are needed) in this case, or \literaloutput{loose} if the bound is not tight (in this case).
+\end{itemize}
+
+\Example

@@ -1,0 +1,45 @@
+\input{../../../tools/stand-alone}
+\Problem{The Morning Train}
+
+%% author:          Jasper
+%% reviews:         -
+%% text-completion:	90%
+%% contest:		    iwi2010
+%% keywords:		simulate
+%% difficulty:		2
+
+{\StandaardZin}
+Inspired by this success, the Dutch railway company NS is planning to install access gates at the entrance of all their stations.
+These gates will prevent anyone without a chipcard from entering the station, which will obviously increase safety.
+However, some people might not have a chipcard yet and may need to buy a ticket first.
+
+Although buying a ticket can take up to thirty minutes, most people that need a ticket can do so in no more than a few minutes.
+However, there are only a limited number of ticket machines, so lines inevitably form.
+As people traveling by train tend to be well-mannered no one will skip the line;
+when it is their turn each person will use the first available ticket machine.
+A person with a ticket or an OV-chipcard can go through an access gate.
+Only one person can pass an access gate at a time; doing so takes one second.
+There is also a limited number of gates, so during rush hour it's still a struggle to get through.
+
+To evaluate their new system, NS wants to simulate a typical work day where everyone needs to catch the morning train.
+Anyone that has passed the access gates at eight o'clock sharp is presumed to catch the train.
+The simulation starts at four in the morning, with an empty train station.
+
+\NOTTODO{I think this can be extended to the case where the gates are for one specific platform and there are multiple times at which trains leave, assuming all persons we consider can all have all trains that leave at that platform. This shouldn't increase the complexity of the solution (much).}
+
+\Input
+\begin{itemize}
+ \item A line with two positive integers $n_g, n_t < 10$, the number of access gates and ticket machines, respectively.
+ 
+ \item A line with a single non-negative integer $n < 10^6$, the number of travelers.
+ 
+ \item $n$ lines, each containing two non-negative integers $t_i < 10^9$ and $d_i \le 1800$, the arrival time (in seconds after four o'clock) and the time spent at a ticket machine (in seconds, zero means no ticket needed). The lines are sorted on the arrival time (in non-decreasing order). Two people with the same arrival times will get in line in the order in which they appear in the input. % Twan: Dit lijkt me niet nodig: (first in the input is first in line)
+\end{itemize}
+
+\Output
+\begin{itemize}
+ \item One line containing a single integer, the number of people who will miss the eight o'clock train.
+\end{itemize}
+
+\vfill % layout
+\Example

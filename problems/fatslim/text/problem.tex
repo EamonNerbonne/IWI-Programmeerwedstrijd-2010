@@ -1,0 +1,36 @@
+\input{../../../tools/stand-alone}
+\Problem{Door dik en dun} \TODO{Titel verengelsen}
+
+%% author:              Marten Veldthuis
+%% reviews:             -
+%% text-completion:	0%
+%% contest:		- (example)
+%% keywords:		example
+%% difficulty:		1..5
+
+% NS poortjes beveiligen station. Mensen moeten alleen wel trein kunnen halen. Genoeg poortjes zijn dus nodig.
+
+With the introduction of the OV-chipcard, the dutch railway company is planning to install access gates at the entrance of all their stations. These gates will prevent anyone without a chipcard from entering the station, which will obviously increase safety.
+
+% There are to types of travellers going through this airport, the ordinary sized people, and the width challenged. Because wide gates are more expensive to purchase than normal, slim gates, the management needs you to figure out how many gates of each type they will need.
+
+\TODO{wide+slim / large+small / normal+large?
+Twan: Mij lijkt "normal" en "large" (of "extra large" of "oversized") het beste.
+}
+
+\Input
+\begin{itemize}
+ \item A line with a two positive integers $c_l$ and $c_x$ ($0 < c_l \le c_x < 10^9$), the cost of a large and an extra large
+ gate in Euros.
+ 
+ \item A line with a single non-negative integer $n < 10^6$, the number of travelers.
+ 
+ \item $n$ lines, each containing a non-negative integer $t_i < 10^9$, a positive integer $d_i < 10^9$ and a string $s_i$; the arrival time (in minutes after the gates are installed), the time spent occupying the gate (in minutes), and the size of the person, either \literaloutput{L} or \literaloutput{XL}.
+\end{itemize}
+
+\Output
+\begin{itemize}
+ \item One line containing a single integer, the cost of the cheapest configuration of wide and slim gates in Euros.
+\end{itemize}
+
+\Example

@@ -1,0 +1,50 @@
+\input{../../../tools/stand-alone}
+\Problem{Downhill}
+
+%% author:			Twan
+%% reviews:         -
+%% text-completion:	0%
+%% contest:			iwi2010
+%% keywords:		sort
+%% difficulty:		3
+
+\def\tspname{Paul}
+
+{\StandaardZin}
+Most commonly the OV-chipcard is used as a toy (4 years and older) or as a bookmark, in some cases it is even used to open locked doors.
+This is why {\tspname}, a traveling salesman from New York, just knew that he had to get his hands on as many of these versatile tools as possible. % note: traveling is US, travelling is British
+%Back home he visits a number of houses each day to sell his merchandise.
+
+The streets in Manhattan, where {\tspname} works, form a regular grid on inclined plane.
+There are numbered streets running east-west and numbered avenues running north-south.
+% wiki:
+% Often, the numbered streets run east-west and the numbered avenues north-south, following the style adopted
+{\tspname} has taken great care to plan an efficient route through the city, visiting all the houses of potential clients.
+
+This Monday morning disaster struck: his car broke down.
+It still runs, but just barely.
+He can go no faster than twenty miles per hour, and only downhill.
+
+Fortunately, Manhattan was built on a hill and {\tspname} lives at the highest point,
+at the intersection of 1st street and 1st avenue.
+%The intersection of 1st avenue and 1st street is at the top of a hill.
+%So he is still able to drive south to 2nd street, or east to 2nd avenue.
+So he is still able to drive south to 2nd street, 3rd street, etc.; or east to 2nd avenue, 3rd avenue, etc..
+His regular route is no longer an option, since then he would also have to drive uphill.
+{\tspname} would still like to visit as many houses as possible, so he can earn enough money to fix his car.
+
+\Input
+\begin{itemize}
+ \item A line with a single natural number \voor{licht}{$n<10^4$}{$n<10^6$}, the number potential clients {\tspname} wants to visit.
+ \item $n$ lines, each containing two positive integers $s_i,a_i < 10^9$, the street and avenue number of the intersections where a house is located.
+       All houses are located at different intersections.
+       \NOTTODO{ is dat `different intersections' nodig? anders is het een naar randgeval }
+\end{itemize}
+
+\Output
+\begin{itemize}
+ \item One line containing a single integer, the maximal number of houses {\tspname} can visit.
+\end{itemize}
+
+\vfill % layout
+\Example

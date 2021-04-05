@@ -1,0 +1,25 @@
+2
+11 206
+XXXXXXXXX...X..X.X.X..X..X.XX.....X.X...X.XXX...XX..X...X.XX..X...X...XX...X.....XXX........X..X.X.X..X..X..X..X..X.XXX.X..X..XXXXX.X..X....XXX...X..X.XX.X.X.X..X.X.....X...X..X....X....X.X....XXXX.XXXXXXXX
+XXX.X.XX.XX.XX.X.....X..X..X.XX.XXX..X.XX.XX.XX...XX.X.X....X.X.X.X.X...X.X.XX.XX.X.XX.XXX.X.X.X.X.X.X.X.XXX.X...X...X....XX.X.X.XX.X.X.XXX..X..XX.X......X.X.X.X...X.XXX.X.X..X.X.X.XXX.X...X.XXXXXX.XXXXXXXX
+XXX.............XX.XX.X...X..X..X...............X.......X.X.....X.....X...X..................X.....X...........X...X...X.X.....X........X..X...X.....XX.XX......X.XX.........X....X....X...XX....XXXX..XXXXXXX
+XXXXXXX.X.XXXX.X......X.XX..X..X.XX..X.X.X.X.XX.X...X.X...X.X.X..XX..X..X..X.XX...X..XX.X.XX...XX.X..X.XX.X..X.X.X.X.XX..X.XX.X..XX.XXX......X.X.X.XX..X..X.X.XX...X.XX.XX.X.X.XX.X.XXXX.XX.X.XXXX.X..XX..XXXX
+XXXXX..X.X......XXX.XX....X..X.X...X.........X..XX.XX.X.XX..X..XX..XX.XX.X.XX..XXXBXX.X..X...X.....X.X.....X.X...X.X.X.X.X....X.X.X.....X.XX.XX..X.X.XX.X.X.X...XXX..........X....X.......X......X.XX....XXXXX
+XXXXXX.....XX.X.X.X.X.X.XX.X.X.X.XX.X.X.XX.X.X...........XX...X.X.X.X.........X........X..XXX.X..X.X...X.X.....X..X.......XX.X......X.X.........X.............X.....X.X.X..X..X.X..XX.X.XX..X.X.X..X..XXXXXXXX
+XXXXXXXX.X...X........................X.......XXX.XX.X.X....X.....X...X..X.X..X.X.X.X..X....X.X.X..XXX.X.XX.XX.XX.XX.X.X.X.....XX.X.X.X.XXXXX.X.X.X.X.X.X.X.X.X.X.XX...XX.X.X.X.XXXX.XX....X.XXX.X..X..XXXXXXX
+XXXXX....X.XX..X.X.XX.X.X.XX.XX.X.X.X..X.XX.X.......XX.XX.X.XX.XX.X.X.X.XX.XX.X.X.X.XX.X.XX.X.X.X.X................X.......X.X........X.............................X.X.......X.........X.X...XX...X..X.XXXXXX
+XXXXXXX.X.XX.XX.X....X...X....X.XX..X.X...X..X.X..X........X.XXX.X.X.X.XX.X.X.X.X..X.X.X....X.X.X.X.X.XX.XX.X.X.XX.X.XX.XX.X.X.XXXX.X..XXXX.XXX.XX.X.XX.X.X.XX.XX.X.X.X.X.X.X..X.XX.XX.X.X.X.X..XX.X.XX..XXXXX
+XXXXXXXX........X.X.X.X.XX.X.X....X..X.X.X..X...X.X.XX.XXX.A.............................XX..X..X...X.X..........X.X..X....X...X.X...XX.....X.X......X..X.X..X.X..X.X.X.X.X.X.X...XX.X.X.X.X.X.X.X.X.X..XXXXXX
+XXXXXXX..X.XX.X....X......X...X.X..X.X....X..X.X..X...X...X.X.X.X.X.X.XX.X.X.X.X.X.X.X.X...............................................................................................................XXXXXXX
+11 206
+...X..X..XX..X...XX..X....XX...X..X..X...X.X...X..X......X..X.XX.X.X...X.....X.....X..X..X.....X..X..X..X.X...X..X..X..X.X..X.X.X.X..X..XX..XX.XX.X.XX.XX..X.X.X.X.X......XXX..XXXX...XXX..X.XX.X..XX.X.XXXXXX
+X.X.X...X......X...X.X.X.X..X.X.XX.X.X.X....XX...XX.X.X.X..X.....X.XX.X.XX.XX.XX.XX.XX.XX.X.X.X.X......X...X..........X...X............X.............X..X.X....X.X.X.XX.XXX.XX..XX.XX.XX..X..X...X.......XX..X
+..X.XX.X.XXX.X...X.X....................XX.X...XX..X...X..X..X.X...............X..X.......X.X.X.X.XX.X.X.X.X.XX.XX.XX.X.X.X.X.X.X.X.XX.X.XX.X.XX.XXX..X.X.XX.X.X.X...X.XX.X.X.XX.X....X.X.X.X.XX.XXXX.XXXXXX..
+X.............X.XX.XX.X.XX.XX.XXX.X.XX.X.X..X.X.XXX.XXX.X.X.X..X.XX.XXXX.XX.XX.....XX.X..X.A...............................................X....X...XX..X..X..X...................X.X.................X..XX..X
+XX.X.X.X.XXXX.X.........B..................X................................X.XXXX....XX.X.X.X.X.XX.X.X.XX.XXX.XX.X.XX.X.XX.XX.XX.XXX.X.XXX.X.XX.X.X.XX.XX.XX.XX.X.XX.X.X.XX.X.X.X.X.X.XXXX.X.X.XX.XX.X.X...X.
+X.X.............XX.X.X.XX.XX.X.X.XX.XX.X.X.X.X.X.XX.X.XX.XXX.XX.XXX.XX.XX.X.......XX................X.X..................................................................................................X.XX.
+X.XX.X.X.XX.XX.X....X..X.XX...X....X.X..X.X..X.X.X.X.X.....X.X..X....X.XX..X.X.X.X..X.X.XXX.XX.X.X.X....XXX.X.X.X.XX.XXXXX.XX.XXXXXXXX.X.X.X.X.X.XXX.XX.X.XX.X.XXX.XX.XXX.XX.XX.X.X.XX.X.XX.X.X.X.XX.X.X...XX.
+X...X..X.X..XXX..X.X.XX.....X..X.XX....................X..X.XXX.X.X.XX...XX...X..X....X........X......X....X....X...........X.X..........X..X..X.X.X.......X.X....XXX...X...XXX.X.XXX..X.XX.X.X..X....X..X....
+..X..X.X..X..X..X....X..X.XX..X.XX.XX.XX.XXXXXX.XXX.X.XX.XX.XX.X.X.XX.XXXX.X.X.XX.XX.X.XXXXXXX.X.XXXX.XXXXX.XXXX.XX.X.XXX.X.X.X.XXXX.XXX.............X.X.X.X.X.XX..X..X..XX..XXX.....X..X....X..X..X.X.XXX.X.X
+.X.XX...XX.X.X.X.X.XX.X.XX.XX.X.X..X...X.X....X.X..............................................................................X.........X..XX.X.XXX.X.XX...X...X.XXX.X.XX..X..XX.XXX..X..XX..XX..X....X....XX
+X..................................................X.X.X.X.X.X.X.X.X.X.XX.X.X.X.XX.X.X.X.XX.X.X.X.X.X.X.X.XX.X.XX.X.X.X.X.X.X....X.XX.XX.X.X......X..X...X.X..X..XXX...X...XXX.......X..X.X..XX..XXX.X..X.X.XX

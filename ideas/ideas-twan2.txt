@@ -1,0 +1,12 @@
+=========================================================
+
+Queue with min size
+
+
+Er zijn $n$ mensen die bij de balie komen, iedereen heeft een vaste aankost en vertrektijd.
+Niemand mag wachten, daarom moeten er genoeg balies zijn.
+Er zijn grote en kleine transacties, grote kunnen alleen bij 'grote' balies afgehandeld worden, klein transacties kunnen bij alle balies worden afgehandeld.
+Een klant kan tijdens een transactie niet wissellen van balie.
+Het bedrijf(?) kan vantevoren elke klant aan een balie toewijzen.
+
+Hoeveel balies zijn minmaal nodig?

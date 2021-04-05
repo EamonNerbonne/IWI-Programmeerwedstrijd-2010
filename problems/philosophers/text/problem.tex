@@ -1,0 +1,64 @@
+\input{../../../tools/stand-alone}
+\Problem{Dining Philosophers}
+
+%% author:			Twan
+%% reviews:         -
+%% text-completion:	50%
+%% contest:			iwi2010
+%% keywords:		inkopper
+%% difficulty:		0
+
+{\StandaardZin}
+Word of this has even traveled beyond this life and into the next.
+
+The first circle of hell is reserved for the unbaptised and the virtuous pagans.
+Among them are most of history's famous philosophers.
+% Zie: http://en.wikipedia.org/wiki/Inferno_%28Dante%29#First_Circle_.28Limbo.29
+
+So it comes to pass that
+Immanuel Kant,
+Socrates,
+John Locke,
+Ren\'e Descartes and
+S{\o}ren Kierkegaard
+decide to hold a dinner party, to ponder these new troublesome developments in the Netherlands.
+They have seated themselves at a round table.
+In front of each philosopher is a dinner plate, between each pair of adjacent plates is a fork.
+In the center of the table is a large tray of chicken drumsticks, freshly roasted above the fires of hell.
+
+These philosophers are among the most civilised men in history,
+but even the most decent folks soon degrade to a band of complete idiots at the sight of chicken drumsticks.
+To prevent this horrible outcome the philosophers have decided on a strict protocol for the dinner.
+Before making any move on the delicious food a philosopher must hold both of the forks next to his plate.
+Only then may he pick up and eat exactly one drumstick from the tray.
+After eating this drumstick, which takes approximately 1 minute,
+%the philosopher is to put down both forks to take a sip of wine, which takes about 10 seconds.
+the philosopher is to put down both forks and has the opportunity to share some deep insight with the other participants, which takes only 10 seconds.
+After that he may try to lift his forks again to resume eating.
+
+% Deadlock
+
+Upon agreeing on the protocols each of the philosophers immediately picks up the fork at his right hand side,
+hoping to get the opportunity to impress the others with his wisdom (not to mention being able to savour the delicious meat he has been staring at for some time now). The philosophers quickly realise the gravity of their dilemma: their protocol is clearly flawed, yet none of them feels compelled to give up their chance to eat.
+
+% Kant
+Kant decides that it is his categorical imperative to do something about this situation.
+\NOTTODO{categorical imperative is eigenlijk iets anders. Moeten we dat fixen?}
+He puts down the fork in his right hand, to give someone else a chance to eat.
+Socrates, who sits next to Kant, immediately takes advantage of this oportunity and picks up the fork.
+Since he now holds two forks he takes a single drumstick and eats it.
+
+% Greedy
+
+\Input
+\begin{itemize}
+ \item A line with a single positive integer $i$, $i < 10^6$, the number of drumsticks on the table.
+\end{itemize}
+
+\Output
+\begin{itemize}
+ \item One line containing a single integer, the number of drumsticks Immanuel Kant eats.
+\end{itemize}
+
+\vfill % layout
+\Example

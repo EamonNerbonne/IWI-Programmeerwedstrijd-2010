@@ -1,0 +1,150 @@
+=========================================================
+
+Manhattan Heuvel TSP
+
+Zoals iedereen weet is New York gebouwt op een heuvel.
+Bovendien "streets" die van noord naar zuid lopen (of andersom), en "avenues" van west naar oost"
+1st street ligt in het noorden van de stad, en elke
+
+Pietje is een handelsrijziger die een aantal plekken in de stad wil bezoeken.
+Helaas voor hem is zijn auto stuk, zodat hij alleen maar heuvelafwaards kan rijden.
+
+Geven zijn een aantal coordinaten van kruispunten waar Pietje langs wil gaan.
+Gevraagd: bij hoeveel van deze kruispunten kan Pietje maximaal langs rijden?
+Pietje begint op het kruispunt van 1st street met 1st avenue
+
+
+=========================================================
+
+Je kent die spelletjes wel waarbij je een knikker door een houten doolhof moet bewegen.
+Door het doolhof te kantellen rolt de knikker naar boven/onder/links/rechts, totdat deze een wand raakt.
+
+Gegeven:
+een doolhof met 1 uitgang en een beginpunt
+
+Gevraagd:
+In hoeveel stappen kan je bij de uitgang komen?
+Een stap bestaat uit het kantellen van het doolhof.
+
+=========================================================
+
+Java decompiler
+
+Gegeven een rij instructies (java bytecode):
+ * iload  <VAR>
+ * istore <VAR>
+ * iconst <INT>
+ * iadd,isub,imul,idiv,irem, enz?
+
+Het gedrag van deze instructies is als volgt:
+ * iload var    <==>  stack.push(var);
+ * istore var   <==>  var = stack.pop();
+ * iconst const <==>  stack.push(const);
+ * iadd         <==>  int a = stack.pop(); int b = stack.pop(); stack.push(a + b);
+
+Gevraagd:
+ * het equivalente java programma, zonder overbodige haakjes
+
+Voorbeeld invoer:
+  iload x
+  iconst 2
+  imul
+  iconst 4
+  iadd
+  istore y
+
+Voorbeeld uitvoer:
+  y = (x * 2) + 4;
+
+=========================================================
+
+Dining Philosophers
+
+5 philosophers hebben een etentje, en zitten aan een ronde tafel (in de 1e cirkel van hel?).
+Voor ieder's neus staat een bord, en tussen elk paar borden ligt een vork.
+Om de boel beschaaft te houden spreken ze af dat iemand pas een gerecht mag opscheppen als hij de twee vorken aan weerszijden van zijn bord vasthoud.
+
+Iedereen pakt de vork die rechts van zijn bord ligt.
+Nu hebben de filosofen een probleem, ze zijn deadlocked.
+
+Emanuel Kant besluit tenslotte dat het zijn categorisch imperatief is om de vork die hij vast houd neer te leggen, zodat iemand anders een kans krijgt om te eten. Zodra Socrates, die rechts van Kant zit, dit ziet grijpt hij zijn kans. Socrates pakt de vork in zijn linkerhand en begint te eten. Als hij het gerecht
+
+
+Gegeven: het aantal gerechten op tafel.
+Gevraagd: hoe veel gerechten eet Emanuel Kant?
+
+Voorbeeld invoer:
+  13
+  65
+
+Voorbeeld uitvoer:
+  2
+  13
+
+=========================================================
+
+Blackmail
+
+* Dirk S. is een rijke milionair. Bij het opbouwen van zijn vermogen heeft hij soms gebruik gemaakt van illegale praktijken. Het is natuurlijk niet de bedoeling dat de rest van de wereld hier achter komt, dat zou Dirk's vermogen flink kunnen schaden.
+  In totaal heeft Dirk $m$ geheimen, die hem elk 1 miljoen euro zouden kosten als ze bekend worden.
+* Peter is een misdaadverslaggever, die achter een aantal van Dirk's geheimen is gekomen. Hij heeft gedrijgd om alle geheimen die hij kent openbaar te maken, tenzij Dirk hem 1 miljoen euro geeft.
+* Peter is niet de enige misdaadverslaggever, in totaal zijn er  $n$ misdaadverslaggevers, die elk een of meer van Dirk's geheimen kennen. 
+
+Gegeven:
+ * Een regel met twee integers, $n$, $m$ < 10^6
+ * $k$ regels met twee integers, die aangeven dat misdaadverslaggever $i$ geheim $j$ kent
+
+Gevraagd:
+ * Hoeveel miljoen euro zal Dirk S. minimaal kwijt raken aan dit hele gebeuren?
+
+
+
+=========================================================
+
+Weiland / Pastures
+
+Boer Bert wil een weiland uitzoeken ergens in de buurt.
+Om te voorkomen dat zijn koeien er vandoor gaan moet om het hele weiland heen een sloot zitten (4 connected).
+Boer Bert is lui, en wil zelf geen sloten graven, hij wil gebruik maken van bestaande sloten.
+
+Bert moet natuurlijk nog wel bij zijn koeien kunnen komen. Daarom wil hij dat er een toegangsweg is vanaf de rand van het gebied naar het weiland. Deze weg moet als het ware een 1 meter brede brug vormen over de sloot om het weiland. Op deze brug bouwt hij dan een hek.
+
+
+Gegeven:
+ * Een kaart van de buurt, '.' is gras, '#' is een sloot.
+   Elk vakje is 1x1 meter
+
+Gevraagd:
+ * Wat is het miximale opervlakte van het weiland in vierkante meter?
+   Alleen gras wordt meegerekend voor het oppervlakte, sloten en bruggen tellen niet mee.
+
+=========================================================
+
+Bulldozer
+
+Bij het aanleggen van een nieuwe weg is de eerste stap het egaliseren van de grond.
+Op sommige plekken ligt te veel aarde, op andere plekken te weinig.
+Er is een krachtige bulldozer beschikbaar om deze klus te klaren.
+Deze bulldozer kan onbegrensd grote hopen aarde verplaatsen:
+Als de bulldozer een meter voor of achteruit rijdt kan een willekeurige hoeveelheid aarde worden meegenomen.
+De bulldozer is wel erg duur in het onderhoud, daarom moet hij zo min mogelijk rijden.
+
+Gegeven:
+ * Een rij van $n$ integers de hoogte van de grond op elke meter weg.
+   Positieve getallen betekent teveel aarde, negatieve getallen te weinig.
+   De som van de rij is $0$.
+
+Gevraagd:
+ * Hoeveel meter moet de bulldozer minimaal rijden om de weg te egaliseren?
+
+=========================================================
+
+Lego (?)
+
+Er zijn twee soorten legoblokken: 1x1 en 1x2.
+
+Gegeven:
+ * Het zijaanzicht van een 'plat' legobouwwerk.
+
+Gevraagd:
+ * Kan dit bouwwerk van lego gemaakt worden zonder dat het uit elkaar valt?

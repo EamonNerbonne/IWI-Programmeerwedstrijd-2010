@@ -1,0 +1,25 @@
+forklift-ando-naive.java:
+	foute oplossing, geeft foute antwoorden
+
+forklift-ando-slow.java:
+	goede oplossing, maar door extra recursive eindigt ie niet
+	binnen een half uur op de testinvoer
+
+forklift-ando.java:
+	goede oplossing, 14 seconden op de testinvoer
+
+forklift-ando-clean.java:
+	goede oplossing, 12 seconden op de testinvoer
+	(geen ordeverschil)
+
+forklift-ando-cleaner.java:
+	goede oplossing, 1.47 seconden op de testinvoer
+	(orde sneller doordat backtracking maar 1 keer berekend wordt)
+
+forklift-ando-cleanesterest.java:
+	goede oplossing, 1.47 seconden op de testinvoer
+	zoals forklift-ando-cleaner.java maar dan nog meer opgeschoond
+
+forklift-ando.rb:
+	goede oplossing, 2.92 seconden op de testinvoer
+	forklift-ando-cleanesterest.java maar dan in ruby

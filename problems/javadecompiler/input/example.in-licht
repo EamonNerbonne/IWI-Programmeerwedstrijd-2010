@@ -1,0 +1,22 @@
+3
+6
+iload x
+iconst 2
+iadd
+iconst 4
+imul
+istore y
+6
+iload x
+iload y
+iload z
+iadd
+iadd
+istore x
+6
+iconst 42
+istore the_answer
+iconst 1
+iconst 0
+idiv
+istore the_question

@@ -1,0 +1,1 @@
+use integer;<>;print$_/5,"\n"while(<>);

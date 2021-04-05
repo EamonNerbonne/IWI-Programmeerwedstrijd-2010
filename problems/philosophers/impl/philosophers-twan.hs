@@ -1,0 +1,1 @@
+main=interact$unlines.map(show.(`div`5).read).tail.words

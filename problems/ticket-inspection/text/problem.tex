@@ -1,0 +1,49 @@
+\input{../../../tools/stand-alone}
+\Problem{Ticket Inspection}
+
+%% author:			Twan
+%% reviews:         -
+%% text-completion:	0%
+%% contest:			not iwi2010
+%% keywords:		bruteforce
+%% difficulty:		3
+
+\TODO{Text goes here}
+
+% fare dodger = zwartrijder
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+  \vspace{-1em}
+  \centering
+\begin{verbatim}
+ XX XX XX XX
+-XX-XX-XX-XX-
+\end{verbatim}
+TODO: maak een mooier plaatje
+% DD-IRM 
+  \caption{Side view of a train. Each double-decker car consists of four compartments. Between each pair of cars and at the ends of the train is a staircase.}
+  \label{fig:train}
+\end{wrapfigure}
+
+The fare dodgers and ticket inspectors take turns
+
+Each turn first all fare dodgers move and then all inspectors move.
+
+\Input
+\begin{itemize}
+ %\item A line with a single positive integer $n < 100$, the number of cars in the train.
+ \item A line with a two positive integer $n < 100$ and $t < 100$, the number of cars in the train and the duration of the trip in turns.
+ \item A line with $2n$ characters, describing each compartment on the top floor of the train.
+       A `d' indicates that a compartment contains a fare dodger,
+         `i' indicates that a compartment contains a ticket inspector,
+         `.' indicates a compartment with only paying passengers.
+       The staircases are initially empty.
+ \item A line with $2n$ characters, describing each compartment on the bottom floor of the train.
+\end{itemize}
+
+\Output
+\begin{itemize}
+ \item One line containing a single integer, the number of fare dodgers that can escape.
+\end{itemize}
+
+\Example

@@ -1,0 +1,85 @@
+
+---------------------------------------------------------------------------------------
+Bustrafic
+---------------------------------------------------------------------------------------
+
+Ik zat te denken: misschien kunnen we wat opgaven die we vorig jaar over hadden hergebruiken. Mijn oog viel op Ando's bustrafic verhaal. Vorig jaar hebben we die niet gebruikt, omdat het onduidelijk was of de oplossing wel optimaal was, waarom, enz. Misschien kunnen we het vereenvoudigen?
+
+
+De set up is als volgt:
+
+* er zijn $n$ bus trajecten, op elk traject rijd één bus heen en weer.
+* elk traject heeft een lengte, gegeven in minuten die het kost om van begin tot eind te rijden, de terugweg duurt net zo lang.
+* in/uit/overstappen kost geen tijd, de bus keert bij het begin/eindpunt direct om.
+* elke bus heeft een bepaalde capaciteit.
+* traject $t_i$ zit tussen punten $p_{i}$ en $p_{i+1}$.
+* bij het beginpunt $p_0$ staan $k$ mensen te wachten die willen naar het eindpunt $p_n$.
+
+Probleem zoals bij bapc:
+* hoe lang duurt het totdat alle mensen bij het eindpunt zijn, als de bussen een optimale eerste vertrektijd hebben?
+
+Vereenvoudigingen (doe dit niet allemaal):
+1. alle bussen vertrekken tegelijkertijd bij hun beginpunt (om 6 uur of zo)
+2. alle bussen hebben dezelfde capaciteit.
+3. er is maar 1 overstap
+
+
+Oplossing/opmerkingen/infodump:
+
+* Je kan net zo goed van achter naar voren werken:
+    - de laatste bus komt aan op t=0, die zat zo vol mogelijk
+    - die bus vertrok om t=-tn, enz.
+
+* Met (2) boeit de capaciteit niet meer (neem k=ceil(oude_k/capaciteit)).
+
+* Met (1,2,3) is het lekker simpel. De oplossing is
+    - als k=0, dan t=0
+    - als t1 <= t2,
+      dan hoeft de 2e bus nooit leeg te rijden, behalve de eerste keer, dus
+         t = (2*k+1)*t2
+    - als t1 > t2,
+      dan rijd de 2e bus af en toe leeg. Met bovenstaande redenering volgt dat
+         t = (2*k+1)*t1
+* Verder vanaf daar, met 3 trajecten:
+    - als t1 <= t2 <= t3, dan
+         als 3*t2 <= t3:  t = (2*k+1)*t3
+         anders:          t = (2*k+3)*t3  (je mist bus 3)
+    - als t1 >= t2 >= t3, idem.
+    - anders, ... (todo)
+
+* Met (2,3) is het misschien nog makkelijker:
+     - als t1 <= t2:  t = t1 + (2*k-1)*t2
+* Met (2) en meer trajecten:
+     - hypothese:  t = t1 + t2 + ... + tn + (2*k-2)*max(t1,t2,...,tn)
+       dit is waarschijnlijk niet waar in het algemeen.
+
+* Met (1) kan je het simuleren, waarschijnlijk zit er niet veel anders op
+
+* Zonder (1): het gaat om de laatste aankomst, dus die wil je optimaliseren.
+  Simuleer iedere stap apart, en laat het vertrek van bus $i+1$ samenvallen met de laatste aankomst van bus $i$. Dit is alleen optimaal als er dan direct mensen van die aankomst mee kunnen, als er te veel oudere mensen staan te wachten, dan moet je met hun aankomst samenvallen.
+
+
+Samengevat:
+* Er zijn twee mogelijke opgaven hier:
+   * simulatie
+   * combinatoriek
+
+
+
+
+
+
+---------------------------------------------------------------------------------------
+Polynomen + integralen
+---------------------------------------------------------------------------------------
+
+* Gegeven 2 (of meer??) veel-de-graads polynomen p1,p2
+* Definieer f(x) = max(p1(x),p2(x))
+* Gevraagd: integraal_0^1 f(x) dx
+
+Verhaaltje:
+
+* Met de ov-chipkaart is het mogelijk om reizigers te monitoren en tellen.
+* Het aantal reizigers-per-minuut in de buurt van een incheck paaltje varieert continue, en is het beste te modelleren met een polynoom
+* Op station groningen staan 2 (??) paaltjes, sommige reizigers worden door beide paaltjes gezien, dus max(p1,p2) is een convervatieve schatting van het totaal aantal mensen op elk tijdstip.
+* Gevraagd: hoeveel reizigers komen er volgens dit model op een dag voorbij?

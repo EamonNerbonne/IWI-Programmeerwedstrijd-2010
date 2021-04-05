@@ -1,0 +1,56 @@
+\input{../../../tools/stand-alone}
+\Problem{Compression}
+
+%% author:			?
+%% reviews:         -
+%% text-completion:	0%
+%% contest:			iwi2010
+%% keywords:		example
+%% difficulty:		3
+
+{\StandaardZin}
+To induce acceptance of the new system by the public, transport companies introduced an innovative SMS help-service.  Unfortunately, the helpdesk's 14.4k baud modem was quickly overwhelmed. To improve the availability of the helpdesk system, the public transport companies want to compress their data traffic.
+This data mostly consists of text, so they need a compressor that is optimized for text.
+
+Your goal is to write the best compressor (and decompressor) that you can possibly think of.  However, since the helpdesk manager is quite desperate by now, even compressing the input by a single character will (partially) satisfy  him.
+
+The input consists of one line of English text, consisting of the following characters: the lower case letters a-z, the upper case letters A-Z, digits 0-9, periods `.' and spaces ` '.
+To ensure compatibility with existing systems the output can only contain those same kinds of characters.
+
+\section*{Scoring}
+
+A correct implementation that reduces the size of the test input is worth half a point.  An implementation whose compression ratio is ranked as better than or equal to at least half of the other contestants' is worth one point.  The implementation(s) with the best compression ratio are worth one and a half points.
+
+Furthermore, your (total) penalty time will be multiplied by the compression factor (defined as $\mbox{compressed size}/\mbox{original size}$).
+Note that you may submit more than one correct implementation and only the first one counts towards your penalty time, while the last one counts for everything else.
+
+Apart from the usual rules an implementation is only considered correct if it
+\begin{itemize}
+%\item Reads/writes the input/output data as described below.
+\item Actually compresses the input \emph{on average} (not all lines need to be compressed).
+\item Can reproduce each original input line \textit{exactly} after compression and subsequent decompression.
+\item Does \textit{not} use any form of I/O other than reading from stdin and writing to stdout.
+\item Does \textit{not} use a library for compression. (A base64 encoding library would be permissible.)
+\end{itemize}
+
+\section*{Running the compressor}
+The \texttt{test-compressor} program can be used to test a compressor.
+It reads a text from the standard input. Then, for each line, it runs the compressor once to compress that line, and once to decompress the compressed line.  Finally, it compares the result to the original and outputs the compression ratio.  The \texttt{test-compressor} program also verifies that only valid characters appear in the input and output.
+
+\begin{verbatim}
+Usage: test-compressor COMPRESSOR < INPUT
+\end{verbatim}
+
+\section*{Input}
+For each run of the program the input consists of exactly two lines.
+\begin{itemize}
+ \item On the first line of the input is a single word indicating the mode of the program, either \literaloutput{compress} or \literaloutput{decompress}.
+ \item On the second line is the string to be compressed/decompressed ($0<\mbox{length}<10^6$). This string satisfies the regular expression \texttt{[a-zA-Z0-9. ]+}.
+\end{itemize}
+
+\section*{Output}
+\begin{itemize}
+ \item One line containing the (de)compressed string.
+\end{itemize}
+
+%\Example

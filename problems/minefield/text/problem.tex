@@ -1,0 +1,39 @@
+\input{../../../tools/stand-alone}
+\Problem{Detector Dodging}
+
+%% author:			Twan, Jasper
+%% reviews:         -
+%% text-completion:	80%
+%% contest:			iwi2010
+%% keywords:		geometry
+%% difficulty:		2
+
+\def\MineName{Monique}
+
+{\StandaardZin}
+As a result {\MineName} has vowed to dodge fares as often as she can.
+However, in order for her not to be caught she does have to check in with her OV-chipcard whenever she takes the train.
+The trick is to avoid checking out at the destination, checking out much closer to home instead.
+
+To prevent suspicion {\MineName} always walks off the platform in a straight line.
+However, this Saturday morning {\MineName} found herself on the train platform in Groningen, on her way to the IWI Programming Contest.
+And unfortunately for her they had set up an enormous amount of more or less randomly positioned detectors.
+She tried making a clean escape, but she could not avoid brushing against a detection rod.
+
+The next time {\MineName} will be prepared!
+Can you help her by finding the size (in degrees) of the largest arc over which there are no rods?
+
+\Input
+\begin{itemize}
+ \item A line with a single positive integer $n < 10^6$, the number of detection rods.
+ \item $n$ lines, each containing two integers, the $x$ and $y$ coordinates of each rod relative to {\MineName}'s current location. $|x|,|y|<10^6$.
+\end{itemize}
+
+\Output
+\begin{itemize}
+ \item One line containing the size of the largest arc (in degrees) over which there are no rods.
+       The answer should be between $0$ and $360$, and have an error of at most $10^{-6}$ degrees.
+\end{itemize}
+
+\vfill % layout
+\Example

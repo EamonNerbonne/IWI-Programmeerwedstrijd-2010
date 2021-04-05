@@ -1,0 +1,20 @@
+3
+6
+iload x
+iconst 2
+iadd
+iconst 4
+imul
+istore y
+6
+iload x
+iload y
+iload z
+iadd
+iadd
+istore x
+4
+iconst 42
+ineg
+ineg
+istore the_answer

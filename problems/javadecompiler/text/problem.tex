@@ -1,0 +1,110 @@
+\input{../../../tools/stand-alone}
+\Problem{Java Decompiler}
+
+%% author:			Twan
+%% reviews:         -
+%% text-completion:	80%
+%% contest:			iwi2010
+%% keywords:		parsing
+%% difficulty:		2
+
+{\StandaardZin}
+The developers claimed that the OV-chipcard is secure, because it is programmed in Java bytecode, which is impossible to decipher. However, security experts have been able to reverse engineer this code and have thereby compromised the chipcard's security.
+
+A Java bytecode program consists of a sequence of instructions.
+The virtual machine that executes these instructions maintains a stack of integers, and instructions can push and pop values from the stack. The possible instructions are:
+
+\def\restofstack{$\dotsc$}
+\Voor{licht}{
+\begin{tabular}{llll}
+\hline
+\bf instruction & \bf stack before & \bf stack after & \bf side effect \\
+\hline
+\texttt{iconst \textit{<INT>}} & \restofstack & \restofstack, \textit{INT} \\
+\texttt{iload \textit{<VAR>}}  & \restofstack & \restofstack, \textit{VAR} \\
+\texttt{istore \textit{<VAR>}} & \restofstack, $a$ & \restofstack & \textit{VAR} = $a$; \\
+\texttt{iadd} & \restofstack, $a$, $b$ & $\dotsc$, $a + b$ \\
+\texttt{isub} & \restofstack, $a$, $b$ & $\dotsc$, $a - b$ \\
+\texttt{imul} & \restofstack, $a$, $b$ & $\dotsc$, $a * b$ \\
+\texttt{idiv} & \restofstack, $a$, $b$ & $\dotsc$, $a / b$ \\
+\hline
+\end{tabular}
+}{
+\begin{tabular}{llll}
+\hline
+\bf instruction & \bf stack before & \bf stack after & \bf side effect \\
+\hline
+\texttt{iconst \textit{<INT>}} & \restofstack & \restofstack, \textit{INT} \\
+\texttt{iload \textit{<VAR>}}  & \restofstack & \restofstack, \textit{VAR} \\
+\texttt{istore \textit{<VAR>}} & \restofstack, $a$ & \restofstack & \textit{VAR} = $a$; \\
+\texttt{iadd} & \restofstack, $a$, $b$ & $\dotsc$, $a + b$ \\
+\texttt{isub} & \restofstack, $a$, $b$ & $\dotsc$, $a - b$ \\
+\texttt{imul} & \restofstack, $a$, $b$ & $\dotsc$, $a * b$ \\
+\texttt{idiv} & \restofstack, $a$, $b$ & $\dotsc$, $a / b$ \\
+\texttt{ineg} & \restofstack, $a$      & $\dotsc$, $-a$ \\
+\hline
+\end{tabular}
+}
+
+Here \texttt{\textit{<VAR>}} is a single Java identifier, \texttt{\textit{<INT>}} is an integer.
+
+
+Your task is to convert a list of bytecode instructions into a readable Java program.
+\voor{licht}{%
+The program should include parentheses around all applications of binary operators.%
+}{%
+The program should only use parentheses when they are strictly required to produce the given bytecode.%
+}
+Put a single space around all binary operators.
+
+To be precise, the program should consist of one or more \nonterminal{stmt}s from the following grammar:
+\Voor{licht}{%
+\begin{align*}
+\nonterminal{exp} \grammarrule&
+                \nonterminal{int}
+   \alternative \nonterminal{var}
+   \alternative \terminal{(}\followedby \nonterminal{exp} \followedby \nonterminal{binop} \followedby \nonterminal{exp} \terminal{)}\\
+\nonterminal{binop} \grammarrule&
+                \terminal{ + }
+   \alternative \terminal{ - }
+   \alternative \terminal{ * }
+   \alternative \terminal{ / }\\
+\nonterminal{stmt} \grammarrule&
+                \nonterminal{var} \followedby \terminal{ = }\followedby \nonterminal{plusexp}\followedby \terminal{;}
+\end{align*}
+}{%
+\begin{align*}
+\nonterminal{plusexp} \grammarrule& 
+                \nonterminal{timesexp}
+   \alternative \nonterminal{plusexp}\followedby \nonterminal{plusop}\followedby \nonterminal{timesexp}\\
+\nonterminal{timesexp} \grammarrule&
+                \nonterminal{unaryexp}
+   \alternative \nonterminal{timesexp}\followedby \nonterminal{timesop}\followedby \nonterminal{unaryexp}\\
+\nonterminal{unaryexp} \grammarrule&
+               \nonterminal{primexp}\alternative \terminal{-}\followedby \nonterminal{primexp}\\
+\nonterminal{primexp} \grammarrule&
+                \nonterminal{int}
+   \alternative \nonterminal{var}
+   \alternative \terminal{(}\followedby \nonterminal{plusexp}\followedby \terminal{)}\\
+\nonterminal{plusop} \grammarrule&
+                \terminal{ + } \alternative \terminal{ - }\\
+\nonterminal{timesop} \grammarrule& 
+                \terminal{ * } \alternative \terminal{ / }\\
+\nonterminal{stmt} \grammarrule&
+                \nonterminal{var} \followedby \terminal{ = }\followedby \nonterminal{plusexp}\followedby \terminal{;}
+\end{align*}
+}
+
+
+\Input
+\begin{itemize}
+ \item A line with a single positive integer $n < 10^6$, the number of assembly instructions that follow.
+ \item $n$ lines, each containing an assembly instruction. Together the instructions form a number of Java statements.
+\end{itemize}
+
+\Output
+\begin{itemize}
+ \item The equivalent program in Java\voor{licht}{}{, without any superfluous parentheses}.
+\end{itemize}
+
+\ExampleSpecialForLicht

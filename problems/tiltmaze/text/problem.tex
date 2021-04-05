@@ -1,0 +1,62 @@
+\input{../../../tools/stand-alone}
+%% author:			Eamon
+%% reviews:         -
+%% text-completion:	0%
+%% contest:			iwi2010
+%% keywords:		maze
+%% difficulty:		4
+
+\Problem{Tilt Maze}
+
+\def\mazename{Herbert}
+
+{\StandaardZin}
+To engender good will amongst travelers, the Groningen bus company Q-Buzz decided to hand out fun gifts to travelers that use the OV-chipcard.  Their marketing devision decided to use small games of manual dexterity: mazes in which the player attempts to roll a small metal ball from the entry to the exit of the maze. 
+The maze is supposed to symbolize the city of Groningen, and the ball a traveler who purposefully moves about within it.
+When the player has found a path from entry to exit, the maze can be solved in a straightforward manner: simply roll the ball along the path, and delicately balance the maze whenever the ball approaches an intersection to ensure it rolls along the intended path.
+
+Unfortunately, players soon discovered that playing this game on the bus proved very challenging.  As the bus constantly shifts and shudders, it's not possible to balance the maze finely enough to control the ball's direction at intersections!
+
+{\mazename}, a student at the Rijksuniversiteit Groningen, thinks he can solve the puzzle despite this handicap, using the fact that each maze lies on a rectangular grid.  He has come up with the following technique: rather than attempt to control the direction of the ball's movement at each intersection, {\mazename} tilts the maze in one direction and waits until the ball comes to a full stop before reorienting the tilt.  To avoid nondeterministic behavior at T-junctions, {\mazename} tilts the maze in a direction that is not parallel to the gridlines so the ball always clearly rolls in one direction.
+
+{\mazename} settles on 8 directions of tilt:
+\begin{itemize}
+	\item Upwards with a slight slant to the left
+	\item Upwards with a slight slant to the right
+	\item Right with a slight slant upwards
+	\item Right with a slight slant downwards
+	\item Downwards with a slight slant right
+	\item Downwards with a slight slant left
+	\item Left with a slight slant downwards
+	\item Left with a slight slant upwards
+\end{itemize}
+
+The maze consists of a grid of blocking squares and passable squares.  When in a square, the ball rolls to the next square in the primary direction if passable, or in the direction of the slight slant when that's passable and the primary direction is blocked.  If both the primary direction and the direction of the slight slant are blocked, the ball comes to a rest and falls into the target (if this is the target square) or {\mazename} can choose a new direction of tilt.  The maze is enclosed in plastic so the ball cannot roll past the edge of the maze (all squares outside of the maze can be considered blocked).  The ball cannot enter the target while rolling.
+
+Can {\mazename} solve the maze using this strategy, and if so, how many tilts will he need?
+
+\NOTTODO{ When is a maze 'solved'? What is the goal of the game at all? Must the ball stop at the exit square, or be able to reach the exit square? Jasper's implementation does the former. This is clearly stated in the text: "If both the primary direction and the direction of the slight slant are blocked, the ball comes to a rest and falls into the target (if this is the target square)" and "The ball cannot enter the target while rolling."}
+\NOTTODO{ Zeggen we nog iets over `open' grids? dwz. mag dit:
+.....
+.....
+We zeggen niks, dus het kan voorkomen
+}
+
+\Input
+\begin{itemize}
+ \item A line with two positive integers $h,w< 10^3$, the height and width of the maze.
+ \item $h$ lines each consisting of $w$ characters, a description of the maze. The following characters are used:
+	\begin{description}
+		\item[\literaloutput{A}] This square is the entry square of the maze.
+		\item[\literaloutput{B}] This square is the exit square of the maze.
+		\item[\literaloutput{X}] This square is blocked.
+		\item[\literaloutput{.}] This square is passable.
+	\end{description}
+\end{itemize}
+
+\Output
+\begin{itemize}
+ \item One line containing a single integer, the minimum number of tilts {\mazename} needs to complete the maze; or \literaloutput{no solution} if {\mazename} cannot solve the maze using his strategy.
+\end{itemize}
+
+\Example

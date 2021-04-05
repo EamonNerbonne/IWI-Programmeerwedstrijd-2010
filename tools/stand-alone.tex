@@ -1,0 +1,15 @@
+% ----------------------------------------------------------------------------------------
+%
+% Latex stuff to ensure that each problem.tex file can also be built itself,
+% as well as being included in larger 'competition' tex files.
+%
+% ----------------------------------------------------------------------------------------
+
+\ifx\MacrosIncluded\undefined
+ \documentclass[11pt,a4paper]{article}
+ \def\StandAlone{yes}
+ \input{../../../tools/macros}
+ \begin{document}
+  \input{problem} % hack
+ \end{document}
+\fi

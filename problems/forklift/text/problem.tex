@@ -1,0 +1,34 @@
+\input{../../../tools/stand-alone}
+\Problem{Forklift}
+
+%% author:			Jasper
+%% reviews:         -
+%% text-completion:	10%
+%% contest:			iwi2010
+%% keywords:		example
+%% difficulty:		1..5
+
+\newcommand{\joe}{Gerard}
+{\StandaardZin}
+Thanks to this amazing system many aspects of public transit can now be automated.
+One of the more innovative changes, intended to reduce the number of fare dodgers, but also to accomodate the elderly and speed up the boarding process, is requiring passengers to travel in boxes. These are more easily accessible than a train and can accomodate people in wheelchairs, or multiple children, in one box! %In addition passengers are perfectly safe during the trip, as the boxes can not be opened from the outside and are nicely padded on the inside.
+
+%To reduce the number of fare dodgers, but also to accomodate the elderly and speed up the boarding process, passengers are required to travel in boxes. These are more easily accessible than a train and can accomodate people in wheelchairs, or multiple children, in one box! %In addition passengers are perfectly safe during the trip, as the boxes can not be opened from the outside and are nicely padded on the inside.
+
+{\joe} drives a forklift truck in the train's compartments to get everyone in the right place, a responsible, well-paid job. All day long he is transporting boxes with passengers to and from the train, leaving them wherever he can. Before departure he has to tidy up and make sure all stacks are equally high, otherwise the train may derail. Since the train should leave on time, {\joe} wants to use the shortest route along the stacks that will enable him to equalize them all.
+
+The train has only one long line of equally-spaced stacks (there is half a meter between stacks), {\joe} is initially in front of the first stack. Each stack has zero or more equally dimensioned boxes (each box is $1.5\times1.5\times1.5$ meters, allowing for people and objects of upto 2.60m in length). When he is in front of a stack he can load or unload as many boxes as he likes. How long is the shortest route is that {\joe} can take to make sure that all stacks are equally high? {\joe} does not need to end where he started.
+
+\Input
+\begin{itemize}
+ \item A line with a single positive integer $n<10^6$, the number of stacks.
+ \item A line with $n$ non-negative integers $b_i < 10^9$, the number of boxes in the $i$th stack.
+       The total number of boxes is divisible by $n$, and is at most $10^9$.
+\end{itemize}
+
+\Output
+\begin{itemize}
+ \item One line containing a single integer, the length in meters of the shortest route that {\joe} can take to make sure that all stacks are equally high.
+\end{itemize}
+
+\Example
